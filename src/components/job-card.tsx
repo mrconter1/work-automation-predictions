@@ -54,6 +54,13 @@ export function JobCard({ job }: { job: JobPrediction }) {
               {isNil(job.currentSalaryLevel) ? "Not specified" : job.currentSalaryLevel}
             </Badge>
           </div>
+          
+          <div className="flex justify-between items-center">
+            <span className="text-sm font-medium">Human Perception Importance:</span>
+            <Badge variant={isNil(job.humanPerceptionImportance) ? "outline" : "destructive"}>
+              {isNil(job.humanPerceptionImportance) ? "Not specified" : job.humanPerceptionImportance}
+            </Badge>
+          </div>
         </div>
       </CardContent>
       <CardFooter>
@@ -93,6 +100,15 @@ export function JobCard({ job }: { job: JobPrediction }) {
                   {isNil(job.currentSalaryLevel) 
                     ? "Not specified yet" 
                     : `This job currently has a ${job.currentSalaryLevel.toLowerCase()} salary level.`}
+                </p>
+              </div>
+              
+              <div className="space-y-2">
+                <h4 className="font-medium">Human Perception Importance</h4>
+                <p className="text-sm">
+                  {isNil(job.humanPerceptionImportance) 
+                    ? "Not specified yet" 
+                    : `The importance of knowing a human is doing this job is ${job.humanPerceptionImportance.toLowerCase()}.`}
                 </p>
               </div>
               
