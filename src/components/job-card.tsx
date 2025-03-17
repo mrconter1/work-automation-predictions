@@ -56,9 +56,9 @@ export function JobCard({ job }: { job: JobPrediction }) {
           </div>
           
           <div className="flex justify-between items-center">
-            <span className="text-sm font-medium">Human Perception Importance:</span>
-            <Badge variant={isNil(job.humanPerceptionImportance) ? "outline" : "destructive"}>
-              {isNil(job.humanPerceptionImportance) ? "Not specified" : job.humanPerceptionImportance}
+            <span className="text-sm font-medium">Human Necessity:</span>
+            <Badge variant={isNil(job.humanNecessity) ? "outline" : "destructive"}>
+              {isNil(job.humanNecessity) ? "Not specified" : job.humanNecessity}
             </Badge>
           </div>
         </div>
@@ -104,11 +104,11 @@ export function JobCard({ job }: { job: JobPrediction }) {
               </div>
               
               <div className="space-y-2">
-                <h4 className="font-medium">Human Perception Importance</h4>
+                <h4 className="font-medium">Human Necessity</h4>
                 <p className="text-sm">
-                  {isNil(job.humanPerceptionImportance) 
+                  {isNil(job.humanNecessity) 
                     ? "Not specified yet" 
-                    : `The importance of knowing a human is doing this job is ${job.humanPerceptionImportance.toLowerCase()}.`}
+                    : `The necessity for humans to perform this job is ${job.humanNecessity.toLowerCase()}.`}
                 </p>
               </div>
               

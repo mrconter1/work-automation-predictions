@@ -1,6 +1,6 @@
 export type PrevalenceLevel = "Very Low" | "Low" | "Medium" | "High" | "Very High" | "Nil";
 export type SalaryLevel = "Very Low" | "Low" | "Medium" | "High" | "Very High" | "Nil";
-export type HumanPerceptionImportance = "Very Low" | "Low" | "Medium" | "High" | "Very High" | "Nil";
+export type HumanNecessityLevel = "Very Low" | "Low" | "Medium" | "High" | "Very High" | "Nil";
 
 export type JobPrediction = {
   title: string;
@@ -8,7 +8,7 @@ export type JobPrediction = {
   automationTimeframeYears: number | null;
   prevalenceInSweden: PrevalenceLevel;
   currentSalaryLevel: SalaryLevel;
-  humanPerceptionImportance: HumanPerceptionImportance;
+  humanNecessity: HumanNecessityLevel;
   automationJustification: string;
 };
 
@@ -19,7 +19,7 @@ export const jobPredictions: JobPrediction[] = [
     automationTimeframeYears: null,
     prevalenceInSweden: "High",
     currentSalaryLevel: "High",
-    humanPerceptionImportance: "Low",
+    humanNecessity: "Low",
     automationJustification: "Nil"
   },
   {
@@ -28,7 +28,7 @@ export const jobPredictions: JobPrediction[] = [
     automationTimeframeYears: null,
     prevalenceInSweden: "Low",
     currentSalaryLevel: "Medium",
-    humanPerceptionImportance: "Very High",
+    humanNecessity: "Very High",
     automationJustification: "Nil"
   },
   {
@@ -37,7 +37,7 @@ export const jobPredictions: JobPrediction[] = [
     automationTimeframeYears: null,
     prevalenceInSweden: "Medium",
     currentSalaryLevel: "High",
-    humanPerceptionImportance: "Very High",
+    humanNecessity: "Very High",
     automationJustification: "Nil"
   },
   {
@@ -46,7 +46,7 @@ export const jobPredictions: JobPrediction[] = [
     automationTimeframeYears: null,
     prevalenceInSweden: "Medium",
     currentSalaryLevel: "Low",
-    humanPerceptionImportance: "Very Low",
+    humanNecessity: "Very Low",
     automationJustification: "Nil"
   },
   {
@@ -55,7 +55,7 @@ export const jobPredictions: JobPrediction[] = [
     automationTimeframeYears: null,
     prevalenceInSweden: "Medium",
     currentSalaryLevel: "Medium",
-    humanPerceptionImportance: "Medium",
+    humanNecessity: "Medium",
     automationJustification: "Nil"
   }
 ]; 
